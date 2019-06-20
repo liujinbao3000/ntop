@@ -13,6 +13,7 @@ RUN  \
   && rm -rf /var/tmp/* \
   && rm -rf /var/lib/apt/lists/*
 
+VOLUME /var/lib/ntopng /etc/ntopng
 EXPOSE 1234
 EXPOSE 2055/UDP
 EXPOSE 3000
