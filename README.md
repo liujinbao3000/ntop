@@ -11,7 +11,10 @@ docker run \
   -d \
   -p 1234:1234 \
   -p 2055:2055/udp \
-  -p 3000:3000 ntop -m [localnetwork(s)]
+  -p 3000:3000 
+  -v config:/etc/ntopng \
+  -v date:/var/lib/ntopng \  
+  ntop -m 
   ```
 
 ## Docker Hub:
@@ -21,7 +24,10 @@ docker run \
   -d \
   -p 1234:1234 \
   -p 2055:2055/udp \
-  -p 3000:3000 johanels/ntopmikrotik -m [localnetwork(s)]
+  -p 3000:3000 \
+  -v config:/etc/ntopng \
+  -v date:/var/lib/ntopng \
+  liujinbao3000/ntopmikrotik -m
 ```
 
 ## RouterOS:
